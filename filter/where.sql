@@ -49,3 +49,10 @@ SELECT name,
 FROM cities
 WHERE area NOT IN (3043, 8223)
   OR name = 'Delhi';
+
+SELECT name,
+  area
+FROM cities
+WHERE area NOT IN (3043, 8223)
+  OR name = 'Delhi'
+  OR name = 'Tokio';

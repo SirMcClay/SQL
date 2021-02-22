@@ -56,3 +56,8 @@ FROM cities
 WHERE area NOT IN (3043, 8223)
   OR name = 'Delhi'
   OR name = 'Tokio';
+
+SELECT name,
+  population / area AS population_density
+FROM cities
+WHERE population / area > 6000;

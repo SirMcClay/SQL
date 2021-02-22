@@ -27,3 +27,8 @@ SELECT name,
   area
 FROM cities
 WHERE name IN ('Delhi', 'Shanghai');
+
+SELECT name,
+  area
+FROM cities
+WHERE name NOT IN ('Delhi', 'Shanghai');

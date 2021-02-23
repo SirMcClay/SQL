@@ -5,3 +5,9 @@ VALUES ('monahan93'),
   ('pferrer'),
   ('si93onis'),
   ('99stroman');
+
+CREATE TABLE photos (
+  id SERIAL PRIMARY KEY,
+  url VARCHAR(200),
+  user_id INTEGER REFERENCES users(id)
+);

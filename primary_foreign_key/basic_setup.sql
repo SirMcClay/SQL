@@ -31,3 +31,16 @@ SELECT url,
   username
 FROM photos
   JOIN users ON users.id = photos.user_id;
+
+-- ERORS AHEAD
+
+INSERT INTO photos (url, user_id)
+VALUES ('http://jpg', 999);
+
+INSERT INTO photos (url, user_id)
+VALUES ('http://jpg');
+
+-- OK BELOW
+
+INSERT INTO photos (url, user_id)
+VALUES ('http://jpg', NULL);

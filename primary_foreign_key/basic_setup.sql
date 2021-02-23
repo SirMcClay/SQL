@@ -22,3 +22,7 @@ VALUES ('http://two.jpg', 1),
   ('http://754.jpg', 2),
   ('http://35.jpg', 3),
   ('http://256.jpg', 4);
+
+SELECT *
+FROM photos
+WHERE user_id = 4;

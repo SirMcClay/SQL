@@ -31,7 +31,7 @@ FROM photos
 
 -- LEFT JOIN
   -- Retrieve all rows from first table, in case photos, even not have a match
-  -- from second table
+  -- from second table, but not drop rows from first table
 SELECT url,
   username
 FROM photos

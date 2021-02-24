@@ -9,4 +9,8 @@ SELECT contents,
 FROM COMMENTS
   JOIN photos ON photos.id = comments.photo_id;
 
-
+-- Deal with ambiguities and use short syntax and aliases
+SELECT comments.id AS comment_id,
+  p.id
+FROM photos AS p
+  JOIN comments ON p.id = comments.photo_id;

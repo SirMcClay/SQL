@@ -28,3 +28,11 @@ SELECT url,
   username
 FROM photos
   INNER JOIN users ON users.id = photos.user_id;
+
+-- LEFT JOIN
+  -- Retrieve all rows from first table, in case photos, even not have a match
+  -- from second table
+SELECT url,
+  username
+FROM photos
+  LEFT JOIN users ON users.id = photos.user_id;

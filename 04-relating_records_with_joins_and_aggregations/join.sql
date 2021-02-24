@@ -18,6 +18,7 @@ FROM photos AS p
 -- FOUR TYPES OF JOIN
 
 -- INNER JOIN
+  -- retrieve just matched rows, those rows which dont match was droped
 SELECT url,
   username
 FROM photos

@@ -29,7 +29,7 @@ SELECT url,
 FROM photos
   INNER JOIN users ON users.id = photos.user_id;
 
--- LEFT JOIN
+-- LEFT OUTER JOIN
   -- Retrieve all rows from first table, in case photos, even not have a match
   -- from second table, but not drop rows from first table
 SELECT url,
@@ -37,7 +37,7 @@ SELECT url,
 FROM photos
   LEFT JOIN users ON users.id = photos.user_id;
 
--- RIGHT JOIN
+-- RIGHT OUTER JOIN
   -- Retrieve all rows from second table, in case users, even not have a match
   -- from first table, but not drop rows from second table
 SELECT url,

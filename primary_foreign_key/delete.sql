@@ -18,6 +18,12 @@ CREATE TABLE photos (
 
 -- ON DELETE SET NULL
   -- if try delete then set all associated data foreign key to NULL
+CREATE TABLE photos (
+  id SERIAL PRIMARY KEY,
+  url VARCHAR(200),
+  user_id INTEGER REFERENCES users(id) ON DELETE
+  SET NULL
+);
 
 -- ON DELETE SET DEFAULT
   -- if try delete set associated foreign keys to a default value

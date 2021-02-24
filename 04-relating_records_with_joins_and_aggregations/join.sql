@@ -36,3 +36,18 @@ SELECT url,
   username
 FROM photos
   LEFT JOIN users ON users.id = photos.user_id;
+
+-- RIGHT JOIN
+  -- Retrieve all rows from second table, in case users, even not have a match
+  -- from first table, but not drop rows from second table
+SELECT url,
+  username
+FROM photos
+  RIGHT JOIN users ON users.id = photos.user_id;
+
+-- FULL JOIN
+  -- Retrieve all data even the rows unmached and not drop rows
+SELECT url,
+  username
+FROM photos
+  FULL JOIN users ON users.id = photos.user_id;

@@ -14,3 +14,16 @@ SELECT comments.id AS comment_id,
   p.id
 FROM photos AS p
   JOIN comments ON p.id = comments.photo_id;
+
+-- FOUR TYPES OF JOIN
+
+-- INNER JOIN
+SELECT url,
+  username
+FROM photos
+  JOIN users ON users.id = photos.user_id;
+-- OR
+SELECT url,
+  username
+FROM photos
+  INNER JOIN users ON users.id = photos.user_id;

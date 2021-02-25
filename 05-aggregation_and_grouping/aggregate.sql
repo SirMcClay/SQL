@@ -4,3 +4,9 @@
   -- of comments
 SELECT MAX(id)
 FROM comments;
+
+-- MIN()
+SELECT MIN(id)
+FROM comments;
+
+

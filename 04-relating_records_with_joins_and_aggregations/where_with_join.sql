@@ -18,3 +18,13 @@ FROM comments
   JOIN users ON users.id = comments.user_id
   AND users.id = photos.user_id;
 
+-- Join prettie the same of the above where we take three tables
+  -- and join books with their reviews and after see if the author of book
+  -- are the same that writes the review and retrive this only rows
+SELECT title,
+  name,
+  rating
+FROM books
+  JOIN reviews ON books.id = reviews.book_id
+  JOIN authors ON authors.id = books.author_id
+  AND authors.id = reviews.reviewer_id;

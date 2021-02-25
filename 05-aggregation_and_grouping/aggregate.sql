@@ -12,3 +12,7 @@ FROM comments;
 -- AVG()
 SELECT AVG(id)
 FROM comments;
+
+-- COUNT()
+SELECT COUNT(id)
+FROM comments;

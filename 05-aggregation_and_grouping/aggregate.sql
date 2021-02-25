@@ -16,3 +16,7 @@ FROM comments;
 -- COUNT()
 SELECT COUNT(id)
 FROM comments;
+
+-- SUM()
+SELECT SUM(id)
+FROM comments;

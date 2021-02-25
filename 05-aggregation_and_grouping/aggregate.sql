@@ -9,4 +9,6 @@ FROM comments;
 SELECT MIN(id)
 FROM comments;
 
-
+-- AVG()
+SELECT AVG(id)
+FROM comments;

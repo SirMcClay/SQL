@@ -1,4 +1,6 @@
 -- Examples: COUNT(), SUM(), AVG(), MIN(), MAX()
+  -- Aggregate sees the grouped value and do a operation on these and returns
+  -- a single value
 
 -- For example if we take MAX() like below we will take the maximum id number
   -- of comments

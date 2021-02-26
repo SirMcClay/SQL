@@ -30,3 +30,8 @@ GROUP BY user_id;
 SELECT photo_id, COUNT(*)
 FROM comments
 GROUP BY photo_id;
+
+-- EXERCISE: Count every book owned for every author grouped by author_id
+SELECT author_id, COUNT(*)
+FROM books
+GROUP BY author_id;

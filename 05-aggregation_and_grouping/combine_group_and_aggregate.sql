@@ -35,3 +35,10 @@ GROUP BY photo_id;
 SELECT author_id, COUNT(*)
 FROM books
 GROUP BY author_id;
+
+-- EXERCISE: Group by authors name and count all books writed by those authos
+  -- here we use a join clause to put these two tables together
+SELECT name, COUNT(*)
+FROM books
+JOIN authors ON authors.id = books.author_id
+GROUP BY authors.name;

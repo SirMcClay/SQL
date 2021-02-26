@@ -58,3 +58,9 @@ FROM comments
 WHERE photo_id < 50
 GROUP BY user_id
 HAVING COUNT(*) > 20
+
+-- Show the manufacturers that have the revenue greater then 2000000
+SELECT manufacturer, SUM(price * units_sold)
+FROM phones
+GROUP BY manufacturer
+HAVING SUM(price * units_sold) > 2000000;

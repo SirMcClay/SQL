@@ -42,3 +42,11 @@ SELECT name, COUNT(*)
 FROM books
 JOIN authors ON authors.id = books.author_id
 GROUP BY authors.name;
+
+-- Show photo ids and number of comments which have id lesser then 3 and 
+  -- number of photos are greater then 2
+SELECT photo_id, COUNT(*)
+FROM comments
+WHERE photo_id < 3
+GROUP BY photo_id
+HAVING COUNT(*) > 2;

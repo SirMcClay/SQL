@@ -2,3 +2,8 @@
 SELECT *
 FROM users
 OFFSET 40;
+
+-- Limit just limit que number of rows returned in our resultset
+SELECT *
+FROM users
+LIMIT 5;

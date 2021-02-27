@@ -12,3 +12,5 @@ ORDER BY price DESC;
 SELECT *
 FROM products
 ORDER BY price ASC;
+
+-- IMPORTANT!!! All above is valid for characteres values and not only to numeric

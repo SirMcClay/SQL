@@ -33,3 +33,18 @@ UNION ALL
 SELECT * FROM products
 UNION
 SELECT * FROM products;
+
+-- Exercise to use union to show manufacturers which phones price are less then
+  -- 170 and union to manufacturers which have more then 2 phones created
+(
+  SELECT manufacturer
+  FROM phones
+  WHERE price < 170
+)
+UNION
+(
+  SELECT manufacturer
+  FROM phones
+  GROUP BY manufacturer
+  HAVING COUNT(*) > 2
+);

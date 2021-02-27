@@ -13,3 +13,9 @@ SELECT *
 FROM products
 ORDER BY price
 LIMIT 5;
+
+-- Just return a resultset of our five most expansive products using now DESC
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 5;

@@ -19,3 +19,8 @@ ORDER BY price ASC;
 SELECT *
 FROM products
 ORDER BY price, weight;
+
+-- Same of above but in descending order
+SELECT *
+FROM products
+ORDER BY price, weight DESC;

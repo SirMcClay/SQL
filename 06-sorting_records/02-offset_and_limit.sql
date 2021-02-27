@@ -7,3 +7,9 @@ OFFSET 40;
 SELECT *
 FROM users
 LIMIT 5;
+
+-- Just return a resultset of our five less expansive products
+SELECT *
+FROM products
+ORDER BY price
+LIMIT 5;

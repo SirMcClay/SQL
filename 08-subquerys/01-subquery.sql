@@ -24,3 +24,14 @@ SELECT name, price, (
 FROM products
 WHERE price > 867;
 
+  -- Exercise to show name, price and ratio price / max price using subquerys
+
+  SELECT name,
+    price,
+    price / (
+      SELECT MAX(price)
+      FROM phones
+    ) AS price_ratio
+  FROM phones;
+
+

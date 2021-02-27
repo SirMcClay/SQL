@@ -28,3 +28,8 @@ UNION ALL
   ORDER BY price / weight DESC
   LIMIT 4
 );
+
+-- For an alternative syntax we can use without parentesis like this:
+SELECT * FROM products
+UNION
+SELECT * FROM products;

@@ -27,3 +27,5 @@ FROM products
 ORDER BY price DESC
 LIMIT 5
 OFFSET 1;
+
+-- BY CONVENTION!!! We use LIMIT first and OFFSET second if we use both ona query

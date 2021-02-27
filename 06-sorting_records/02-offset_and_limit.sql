@@ -19,3 +19,11 @@ SELECT *
 FROM products
 ORDER BY price DESC
 LIMIT 5;
+
+-- Just return a resultset of our five most expansive products and ignore the 
+  -- one most expansive using OFFSET 1
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 5
+OFFSET 1;

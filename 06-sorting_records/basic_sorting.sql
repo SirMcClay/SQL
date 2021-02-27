@@ -2,3 +2,8 @@
 SELECT *
 FROM products
 ORDER BY price;
+
+-- Simple order by a colunm value IN DESCENDING ORDER
+SELECT *
+FROM products
+ORDER BY price DESC;

@@ -106,3 +106,13 @@ WHERE price > (
   SELECT AVG(price)
   FROM products
 );
+
+-- Exercise: Select the name and price of phones that have the price greater
+  -- than the phone S5620 Monte price using a subquery
+SELECT name, price
+FROM phones
+WHERE price > (
+  SELECT price
+  FROM phones
+  WHERE name = 'S5620 Monte'
+);

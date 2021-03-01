@@ -34,4 +34,14 @@ WHERE price > 867;
     ) AS price_ratio
   FROM phones;
 
-
+-- Subquerys on FROM
+  -- GOTCHA - subquerys on FROM must have a ALIAS using AS clause otherwise
+  -- a error is throw
+SELECT name,
+  price_weight_ratio
+FROM (
+    SELECT name,
+      price / weight AS price_weight_ratio
+    FROM products
+  ) AS p
+WHERE price_weight_ratio > 5;

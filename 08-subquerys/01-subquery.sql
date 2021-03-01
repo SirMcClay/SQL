@@ -61,3 +61,12 @@ FROM
     FROM orders
     GROUP BY user_id
   ) AS p;
+
+-- Exercise: Calculate a max average price for the average price of all phones
+  -- from each manufacturer of our table phones
+SELECT MAX(p.avg_price) AS max_average_price
+FROM (
+  SELECT AVG(price) AS avg_price
+	FROM phones
+	GROUP BY manufacturer
+) AS p;

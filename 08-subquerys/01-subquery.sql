@@ -45,3 +45,9 @@ FROM (
     FROM products
   ) AS p
 WHERE price_weight_ratio > 5;
+
+-- Another simple example of subquery applied on FROM
+SELECT *
+FROM (
+	SELECT MAX(price) FROM products
+) AS p;

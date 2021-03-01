@@ -70,3 +70,14 @@ FROM (
 	FROM phones
 	GROUP BY manufacturer
 ) AS p;
+
+-- Subquerys on JOIN
+  -- Just a simple and contrive example just to get used with the rules
+SELECT first_name
+FROM users
+JOIN (
+  SELECT user_id
+  FROM orders
+  WHERE product_id = 3
+) AS o
+ON o.user_id = users.id;

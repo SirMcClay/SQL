@@ -96,3 +96,13 @@ IN (
   FROM products
   WHERE price / weight > 50
 );
+
+-- Another subquery used on WHERE
+  -- Here return a dataset with all names of products which have price greater
+  -- than the average price of all products
+SELECT name
+FROM products
+WHERE price > (
+  SELECT AVG(price)
+  FROM products
+);

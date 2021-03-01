@@ -51,3 +51,13 @@ SELECT *
 FROM (
 	SELECT MAX(price) FROM products
 ) AS p;
+
+-- A more intricate example, now calculation a average value of number of orders
+  -- by user using of course a subquery
+SELECT AVG(order_count)
+FROM
+  (
+    SELECT user_id, COUNT(*) AS order_count
+    FROM orders
+    GROUP BY user_id
+  ) AS p;

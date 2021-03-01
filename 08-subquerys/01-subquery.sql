@@ -81,3 +81,18 @@ JOIN (
   WHERE product_id = 3
 ) AS o
 ON o.user_id = users.id;
+
+-- Subquery on WHERE
+  -- IMPORTANT!!! The structure of data returned from subquery depends upon a
+  -- comparison operator used on WHERE clause
+-- Select ids of orders where the product id was present on a result of a 
+  -- subquery which return the ids of products which have the pirce_weight_ratio
+  -- greater than 50
+SELECT id
+FROM orders
+WHERE product_id 
+IN (
+  SELECT id
+  FROM products
+  WHERE price / weight > 50
+);

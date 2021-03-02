@@ -147,3 +147,13 @@ WHERE price > SOME (
   FROM products
   WHERE department = 'Industrial'
 );
+
+-- Exercise: Print que phones that have a price greater than any phone made by
+  -- manufacturer Samsung
+SELECT name
+FROM phones
+WHERE price > ALL (
+	SELECT price
+  FROM phones
+  WHERE manufacturer = 'Samsung'
+);

@@ -187,3 +187,10 @@ SELECT (
 ) / (
   SELECT AVG(price) FROM products
 );
+
+-- ...or just show the results from multiple subquerys
+SELECT (
+	SELECT MAX(price) FROM products
+), (
+  SELECT AVG(price) FROM products
+);

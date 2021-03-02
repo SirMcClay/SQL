@@ -137,3 +137,13 @@ WHERE price > ALL (
   FROM products
   WHERE department = 'Industrial'
 );
+
+-- Using > SOME operator inside WHERE clause to compare price which is greater
+  -- greater then at least one price of all products of Industrial department
+SELECT name, department, price
+FROM products
+WHERE price > SOME (
+	SELECT price
+  FROM products
+  WHERE department = 'Industrial'
+);

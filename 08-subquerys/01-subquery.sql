@@ -116,3 +116,14 @@ WHERE price > (
   FROM phones
   WHERE name = 'S5620 Monte'
 );
+
+-- Another example of subquery on WHERE which returns a colunm and allow us 
+  -- to chech and get a dataset with all products there are NOT IN the result
+  -- of the subquery
+SELECT name, department
+FROM products
+WHERE department NOT IN (
+  SELECT department
+  FROM products
+  WHERE price < 100
+);

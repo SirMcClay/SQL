@@ -168,3 +168,14 @@ WHERE p1.price = (
   FROM products AS p2
   WHERE p2.department = p1.department
 );
+
+-- Yet Correlated Subquery we now have a example with subquery inside a SELECT
+  -- clause returnin the name and number of orders of every product on our 
+  -- dataset
+SELECT p1.name,
+(
+	SELECT COUNT(*)
+  FROM orders AS o1
+  WHERE o1.product_id = p1.id
+)
+FROM products as p1;

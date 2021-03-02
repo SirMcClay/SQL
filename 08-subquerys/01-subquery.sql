@@ -157,3 +157,14 @@ WHERE price > ALL (
   FROM phones
   WHERE manufacturer = 'Samsung'
 );
+
+-- Correlated Subquery - Here return the most expensive product from each 
+  -- department using subquery and compare the departments of outer query (p1)
+  -- and inner (subquery - p2)
+SELECT name, department, price
+FROM products AS p1
+WHERE p1.price = (
+	SELECT MAX(price)
+  FROM products AS p2
+  WHERE p2.department = p1.department
+);

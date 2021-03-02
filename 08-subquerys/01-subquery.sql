@@ -194,3 +194,12 @@ SELECT (
 ), (
   SELECT AVG(price) FROM products
 );
+
+-- Here a similar query but with more subquerys and aliases
+SELECT (
+	SELECT MAX(price) FROM phones
+) AS max_price, (
+  SELECT MIN(price) FROM phones
+) AS min_price, (
+  SELECT AVG(price) FROM phones
+) AS avg_price;

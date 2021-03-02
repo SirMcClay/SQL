@@ -127,3 +127,13 @@ WHERE department NOT IN (
   FROM products
   WHERE price < 100
 );
+
+-- Using > ALL operator inside WHERE clause to compare values with all values
+  -- of a returned colunm from subquery
+SELECT name, department, price
+FROM products
+WHERE price > ALL (
+	SELECT price
+  FROM products
+  WHERE department = 'Industrial'
+);

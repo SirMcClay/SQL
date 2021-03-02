@@ -179,3 +179,11 @@ SELECT p1.name,
   WHERE o1.product_id = p1.id
 )
 FROM products as p1;
+
+-- SELECT without a FROM or WHERE...etc. This is usefull if you want to caluclate
+  -- the value of a returnd other values from subquery
+SELECT (
+	SELECT MAX(price) FROM products
+) / (
+  SELECT AVG(price) FROM products
+);

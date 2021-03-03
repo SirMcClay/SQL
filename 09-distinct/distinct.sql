@@ -7,3 +7,7 @@ FROM products;
   -- number of unique departaments
 SELECT COUNT(DISTINCT department)
 FROM products;
+
+-- Now we get the unique combinations of departament and name using DISTINCT
+SELECT DISTINCT department, name
+FROM products;
